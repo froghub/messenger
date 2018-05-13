@@ -13,8 +13,8 @@ import org.springframework.security.web.authentication.LoginUrlAuthenticationEnt
         @Override
         protected void configure(HttpSecurity http) throws Exception {
             http.authorizeRequests()
-                    .antMatchers("/login", "/error","/").permitAll()
-                    .antMatchers("/**").authenticated()
+                    .antMatchers("/login", "/error","/","/js/*","/css/*").permitAll()
+                    //.antMatchers("/**").authenticated()
                     .and().exceptionHandling()
                     .authenticationEntryPoint(new LoginUrlAuthenticationEntryPoint("/login"));
         }
