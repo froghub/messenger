@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>title</title>
+    <title>{{layout.title}}</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/main.css">
 
@@ -10,6 +10,29 @@
     <script src="/js/popper.min.js"></script>
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="/js/m.js"></script>
-
+    <!--<sec:csrfMetaTags /></sec:csrfMetaTags>-->
 </head>
 <body>
+<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Messenger</a>
+    <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/faq">FAQ</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/api">API</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" action="/login">
+            <button class="btn btn-primary" type="submit">Login</button>
+        </form>
+    </div>
+</nav>
